@@ -26,7 +26,7 @@ int estrcmp(const char *s1, const char *s2);
 void swap(void *v[], size_t i, size_t j);
 void quick_sort(void *v[], size_t start, size_t end, int (*comp)(void *, void *));
 
-int order = 1; // 1 ascendent, -1 descendent
+int order = 1;
 int (*comp)(const char *, const char *) = estrcmp;
 
 int main(int argc, char *argv[])
@@ -216,5 +216,3 @@ void afree(char *ptr)
     alloc_p = ptr;
   }
 }
-
-// NOTE: run: ./sort -nr < file_in.txt
