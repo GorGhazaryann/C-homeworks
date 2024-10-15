@@ -11,16 +11,12 @@ int main(void)
   int histogram_length = 0;
 
   int max_word_count = 0;
-
-  // Initialize the histogram array with 0
   int i;
   for (i = 0; i < BUFFER; ++i)
   {
     histogram[i] = 0;
   }
 
-  // Count the words length and store in histogram array at the
-  // specific index
   char c;
   int word_count_index = 0;
   while ((c = getchar()))
@@ -54,7 +50,7 @@ int main(void)
     }
   }
 
-  // Add in the histogram array a end of useful data char
+
   histogram[histogram_length + 1] = '$';
 
   putchar('\n');
@@ -62,7 +58,7 @@ int main(void)
   int column_index = 0;
   int line_index = 0;
 
-  // Print horizontal histogram
+
   printf("Horizontal Histogram\n--------------------\n");
 
   while (histogram[column_index] != '$')
@@ -81,7 +77,7 @@ int main(void)
 
   putchar('\n');
 
-  // Print a vertical histogram
+
   printf("Vertical Histogram\n------------------\n");
 
   for (line_index = max_word_count; line_index >= 0; --line_index)
